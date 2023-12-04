@@ -1,0 +1,31 @@
+server:
+  port: 4000
+spring:
+  application:
+    name: tzmall-operations
+
+tzmall:
+  # 正式服务启停是否启用推送功能 TODO 此处记得改为True
+  serviceStartup:
+    enable: true
+  # 预发布服务启停是否启用推送功能
+  preServiceStartup:
+    enable: true
+  nacos:
+    #host: https://nacos.kuajingzhilian.com/nacos
+    host: http://192.168.1.128:8848/nacos
+    # 正式nacos邮件预警
+    warningEmail: wuruixu@sztaizhou.com
+    #warningEmail: wuruixu@sztaizhou.com,yangzhangyun@sztaizhou.com,whw@sztaizhou.com
+  qywx:
+    # 企业微信平台组长key
+    leaderKey: 92f4f818-2779-497f-98f4-48aa6ef847e6
+    # 企业微信平台运维key
+    guardKey: 5cacb416-1f92-4667-97a4-6774c3c93b52
+    # 企业微信预发布推送群key
+    platformKey: 42432fae-7b22-4a29-9d70-80c5ed099fa6
+
+# 日志
+logging:
+  level:
+    com.tzmall.operations.common.scheduled: debug
